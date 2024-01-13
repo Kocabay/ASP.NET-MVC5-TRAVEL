@@ -1,0 +1,139 @@
+﻿@using TravelTripProje.Models.Sınıflar;
+@model List<Blog>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Personal Blog a Blogging Category Flat Bootstarp  Responsive Website Template | Single :: w3layouts</title>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+    <!----//webfonts---->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--end slider -->
+    <!--script-->
+    <script type="~/web2/text/javascript" src="js/move-top.js"></script>
+    <script type="~/web2/text/javascript" src="js/easing.js"></script>
+    <!--/script-->
+    <script type="~/web2/text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+            });
+        });
+    </script>
+    <!---->
+
+</head>
+<body>
+    <!---header---->
+    <div class="header">
+        <div class="container">
+            <div class="clearfix"></div>
+            <script>
+                $("span.menu").click(function () {
+                    $(".top-menu ul").slideToggle("slow", function () {
+                    });
+                });
+            </script>
+            <!---//End-top-nav---->
+        </div>
+    </div>
+    <!--/header-->
+    <div class="single">
+        <div class="container">
+            <div class="col-md-8 single-main">
+                <div class="single-grid">
+
+                    <div class="single-grid">
+
+                        <img src="https://planetofhotels.com/guide/sites/default/files/styles/big_gallery_image/public/text_gallery/Turkey-5.jpg" alt="" />
+                        <br />
+                        <a href="/Blog/BlogDetails/">Türkiyede Bir Gece Geçirmek.</a>
+                        <p>
+                            Türkiye, köprü konumuyla Asya ve Avrupa kıtalarını birleştiren eşsiz coğrafi konumuyla dikkat çeken bir ülkedir. Zengin tarihi ve kültürel mirasıyla bilinen Türkiye, birçok medeniyetin izlerini bünyesinde barındırır.
+                        </p>
+                    </div>
+
+                    <img src="https://assets.enuygun.com/media/lib/570x400/uploads/image/1764.jpeg" alt="" />
+                    <br />
+                    <a href="/">Pariste Bir Gece Geçirmek.</a>
+                    <p>
+                        Paris, Fransa'nın başkenti ve dünyanın en romantik şehirlerinden biridir. Tarihi zenginlikleri, sanat müzeleri, lüks alışveriş caddeleri ve ünlü anıtlarıyla bilinir.
+                    </p>
+                </div>
+                <br />
+
+                <div class="single-grid">
+
+                    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQIya2AE6Hj1szHbUwb4a9nbLDGM5oQiOfAOFJdGpKkr0FdpNTgDof2N7BXuSX3gEBOFWvrBBPzcWt8ttRbwIQUsmgylsyliArSiU7YZQ" alt="" />
+                    <br />
+                    <a href="/">Almanya Bir Gece Geçirmek.</a>
+                    <p>
+                        Almanya, Orta Avrupa'da yer alan bir ülkedir ve ekonomik gücü, kültürel zenginliği ve tarihiyle ön plana çıkar. Başkenti Berlin olan ülke, sanat, bilim ve endüstri alanlarında önemli bir rol oynamıştır
+                    </p>
+                </div>
+
+
+            </div>
+
+
+            @foreach(var item in Model)
+            {
+                <div class="single-grid">
+
+                    <img src="@item.BlogImage" style="margin-bottom:20px;" alt="" />
+                    <br />
+                    <a href="/Blog/BlogDetails/@item.ID">@item.Başlık</a>
+                    <p>
+                        @item.Açıklama
+                    </p>
+                </div>
+            }
+
+
+
+            <div class="col-md-4 side-content">
+                <div class="recent">
+                    <h3>Son Yorumlar</h3>
+                    <ul>
+                        <li><a href="#">Aliquam tincidunt mauris</a></li>
+                        <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
+                        <li><a href="#">Nunc dignissim risus consecu</a></li>
+                        <li><a href="#">Cras ornare tristiqu</a></li>
+                    </ul>
+                </div>
+                <div class="comments">
+                    <h3>Son Bloglar</h3>
+                    <ul>
+                        <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
+                        <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
+                        <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+<!---->

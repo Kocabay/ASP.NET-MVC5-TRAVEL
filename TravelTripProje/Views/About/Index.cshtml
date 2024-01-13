@@ -1,0 +1,26 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Hakkımızda>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<body>
+
+    <div class="content">
+        <div class="wrap">
+            <div class="about">
+                <h3>Hakkımızda</h3>
+                <img src="https://img.freepik.com/free-photo/travel-concept-with-worldwide-landmarks_23-2149153263.jpg?3&w=900&t=st=1705145603~exp=1705146203~hmac=88e2d45362fa3f408c7227b6c853c1c9d5f62f6022a7d10d9a79340c41198e3b" />
+                <p> lorem lorem lorem lorem lorem dsadsa </p>
+                @foreach (var item in Model)
+                {
+                    @*<img src="@item.ImageUrl" alt="" /> *@
+                    @* <p> @item.Açıklama</p> *@
+                }
+            </div>
+        </div>
+    </div>
+
+</body>
+
