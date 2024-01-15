@@ -906,3 +906,14 @@ height: 135px;
 font-size: 1.1em;
 }
 }
+.wrap {
+    display: flex;
+}
+
+.banner {
+    flex: 1;
+}
+
+.header_bottom_right_images {
+    flex: 1;
+}

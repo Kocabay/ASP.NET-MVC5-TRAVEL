@@ -10,6 +10,6 @@ namespace TravelTripProje.Models.Sınıflar
         public DateTime Tarih { get; set; }
         public string Açıklama { get; set; }
         public string BlogImage { get; set; }
-        public ICollection<Yorumlar> Yorumlars { get; set; }
+        //public ICollection<Yorumlar> Yorumlars { get; set; }
     }
 }

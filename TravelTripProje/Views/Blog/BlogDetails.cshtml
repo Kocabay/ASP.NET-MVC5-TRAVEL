@@ -1,18 +1,14 @@
-﻿@{
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+@{
     ViewData["Title"] = "BlogDetails";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
 }
-
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+ 
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Personal Blog a Blogging Category Flat Bootstarp  Responsive Website Template | Single :: w3layouts</title>
+    <title>Personal Blog </title>
     <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +21,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
     <!----//webfonts---->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!--end slider -->
+    <!--end 
+
+    -->
     <!--script-->
     <script type="~/web2/text/javascript" src="js/move-top.js"></script>
     <script type="~/web2/text/javascript" src="js/easing.js"></script>
@@ -43,18 +41,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
  
+ 
     <div class="single">
         <div class="container">
             <div class="col-md-8 single-main">
                 <div class="single-grid">
-                    <img src="https://planetofhotels.com/guide/sites/default/files/styles/big_gallery_image/public/text_gallery/Turkey-5.jpg" alt="" />
+            @*         @foreach (var item in Model)
+
+                    {
+                        <img  src="@item.BlogImage" alt=""/>
+                        <h2>     @item.Başlık</h2>
+                        <p> @item.Açıklama  </p>
+
+                    } *@
+                    <img src="https://planetofhotels.com/guide/sites/default/files/styles/big_gallery_image/public/text_gallery/Turkey-5.jpg" style="margin-bottom:20px;" alt="" />
                     <a href="/">Türkiyede Bir Gece Geçirmek.</a>
                     <p>
                         Türkiye, köprü konumuyla Asya ve Avrupa kıtalarını birleştiren eşsiz coğrafi konumuyla dikkat çeken bir ülkedir. Zengin tarihi ve kültürel mirasıyla bilinen Türkiye, birçok medeniyetin izlerini bünyesinde barındırır.
                     </p>
                 </div>
                 <ul class="comment-list">
-            
+               @*      @foreach (var item in Model)
+                    {
+                        <li>
+                            <img src="@item.BlogImage" class="img-responsive" alt="">
+                            <div class="desc">
+                                <p>@item.Açıklama</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                    }
+                    *@
+
                     <li>
                         <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
                         <div class="desc">
@@ -68,35 +86,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <li>
                         <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
                         <div class="desc">
-                            <p>Sena Tek:  Mükemmelsin..</p>
+                            <p>Deneme:  Deneme</p>
                         </div>
                         <div class="clearfix"></div>
                     </li>
                 </ul>
                 <div class="content-form">
-                    <h3>Leave a comment</h3>
+                    <h3>Bir Yorum Yapın.</h3>
                     <form>
-                        <input type="text" placeholder="Name" required />
-                        <input type="text" placeholder="Email" required />
-                        <input type="text" placeholder="Phone" required />
-                        <textarea placeholder="Message"></textarea>
-                        <input type="submit" value="SEND" />
+                        <input type="text" placeholder="Kullanıcı Adı" required />
+                        <input type="text" placeholder="Mail Adresi" required />
+                        <textarea placeholder="Mesajı Giriniz"></textarea>
+                        <input type="submit" value="Gönder" />
                     </form>
                 </div>
             </div>
 
             <div class="col-md-4 side-content">
                 <div class="recent">
-                    <h3>RECENT POSTS</h3>
+                    <h3>Son Bloglar</h3>
                     <ul>
-                        <li><a href="#">Aliquam tincidunt mauris</a></li>
-                        <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
-                        <li><a href="#">Nunc dignissim risus consecu</a></li>
-                        <li><a href="#">Cras ornare tristiqu</a></li>
+                        <li><a href="#">Hayaller Şehri Roma</a></li>
+                        <li><a href="#">Eyfel'in Önünde Bir Gündüz Geçirmek</a></li>
+                        <li><a href="#">Efyel'den sonra Rotamız:Lyon</a></li>
+ 
+                  
                     </ul>
                 </div>
                 <div class="comments">
-                    <h3>RECENT COMMENTS</h3>
+                    <h3>Son Yorumlar</h3>
                     <ul>
                         <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
                         <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
