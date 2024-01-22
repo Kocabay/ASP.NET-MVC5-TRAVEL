@@ -2,6 +2,7 @@
 
 namespace TravelTripProje.Controllers
 {
+    
     public class DefaultController : Controller
     {
         public IActionResult Index()
@@ -12,9 +13,15 @@ namespace TravelTripProje.Controllers
         {
             return View();
         }
-        public IActionResult s()
+   
+        public PartialViewResult Partial1()
         {
-            return View();
+            return PartialView();
         }
+        //public PartialViewResult Partial3()
+        //{
+        //    var deger = c.blogs
+        //    return PartialView();
+        //}
     }
 }
